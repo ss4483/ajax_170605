@@ -4,7 +4,7 @@
 </div>
 <a href="/posts/new">글쓰기  </a><br>
 <% @posts.each do |p| %>
-  <a href="/posts/show/<%= p.id %>"><%= p.id %>. <%= p.title %></a>
+  <a href="/posts/show/<%= p.id %>">1번</a> <%= p.id %>. <%= p.title %> <a href="/posts/show2/<%= p.id %>">2번</a>
   <br>
 <% end %>
 

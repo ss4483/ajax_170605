@@ -1,0 +1,20 @@
+<h1><%=@post.id%>번째 POST</h1>
+제목 : <%= @post.title %>
+<br>
+내용 : <%= @post.content %>
+<br>
+
+<a href="/posts/edit/<%= @post.id %>">[수정]</a>
+<a href="/posts/destroy/<%= @post.id %>" data-method="post">[삭제]</a>
+<br>
+<a href="/">목록으로</a>
+
+<hr>
+
+
+<input id ="comment_text" type="text" name="comment">
+<input type="submit" value="댓글작성">
+
+<div id="comments_box">
+   
+</div>

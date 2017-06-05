@@ -10,11 +10,15 @@
 <a href="/">목록으로</a>
 
 <hr>
+
+
 <form action="/comments/create/<%=@post.id%>" method="post">
     <input id ="comment_text" type="text" name="comment">
     <input type="submit" value="댓글작성">
 </form>
 
-<% @post.comments.each do |r| %>
-    <p><%= r.id %>. <%= r.content %>  <a href="/posts/show/<%=@post.id%>/destroy/<%= r.id %>" data-method="post">[X]</a>   </p>
-<% end %>
+<div id="comments_box">
+    <% @post.comments.each do |r| %>
+        <p><%= r.id %>. <%= r.content %>  <a href="/posts/show/<%=@post.id%>/destroy/<%= r.id %>" data-method="post">[X]</a></p>
+    <% end %>
+</div>

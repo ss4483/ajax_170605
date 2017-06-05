@@ -22,7 +22,13 @@ class PostsController < ApplicationController
   
   def show # 특정 내용만
     # views/show.erb 보여줘
-    @post = Post.find(1)
+    @post = Post.find(params[:post_id])
+  end
+  
+  
+  def show2 # 특정 내용만
+    # views/show.erb 보여줘
+    @post = Post.find(params[:post_id])
   end
   
   # U

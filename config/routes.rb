@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
  root 'posts#index'
  get 'posts/show/:post_id'=> 'posts#show'
- 
+ get 'posts/show2/:post_id'=> 'posts#show2'
  
   get 'posts/edit/:post_id' => 'posts#edit'
  post 'posts/update/:post_id' => 'posts#update'
