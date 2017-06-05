@@ -1,5 +1,10 @@
+<div id="my_div">
+  <input type="text" id ="this_input">
+  <button id="this">클릭</button><br>
+</div>
 <a href="/posts/new">글쓰기  </a><br>
 <% @posts.each do |p| %>
   <a href="/posts/show/<%= p.id %>"><%= p.id %>. <%= p.title %></a>
   <br>
 <% end %>
+

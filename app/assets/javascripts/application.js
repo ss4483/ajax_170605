@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function(){ 
+    // $('#this').click(function() { 
+        // alert('hi'); 
+        // var txt = $('#this_input').val();
+        // alert(txt);
+        // $('#my_div').append( txt );
+    // });
+    
+});
