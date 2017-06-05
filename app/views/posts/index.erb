@@ -1,0 +1,5 @@
+<a href="/posts/new">글쓰기  </a><br>
+<% @posts.each do |p| %>
+  <a href="/posts/show/<%= p.id %>"><%= p.id %>. <%= p.title %></a>
+  <br>
+<% end %>

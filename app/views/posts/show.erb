@@ -1,0 +1,20 @@
+<h1><%=@post.id%>번째 POST</h1>
+제목 : <%= @post.title %>
+<br>
+내용 : <%= @post.content %>
+<br>
+
+<a href="/posts/edit/<%= @post.id %>">[수정]</a>
+<a href="/posts/destroy/<%= @post.id %>" data-method="post">[삭제]</a>
+<br>
+<a href="/">목록으로</a>
+
+<hr>
+<form action="/comments/create/<%=@post.id%>" method="post">
+    <input id ="comment_text" type="text" name="comment">
+    <input type="submit" value="댓글작성">
+</form>
+
+<% @post.comments.each do |r| %>
+    <p><%= r.id %>. <%= r.content %>  <a href="/posts/show/<%=@post.id%>/destroy/<%= r.id %>" data-method="post">[X]</a>   </p>
+<% end %>
